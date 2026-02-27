@@ -7,4 +7,7 @@ id: .asciiz "@04001794"
 main:
   la $s0,id    #load address of id into $s0
   li $s1,11    #loads immediate into $s1
-	
+
+forward_loop:
+	bgt $t0, $s1, backward_start #branches to backward_start if $t0 is greater than $s1
+	# s = (m - 1) % 9 
