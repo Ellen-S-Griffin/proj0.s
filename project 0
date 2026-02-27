@@ -1,2 +1,8 @@
 .data
 id: .asciiz "@04001794"
+
+.text
+.globl main
+
+main:
+  la $s0,id    #load address of id into $s0
