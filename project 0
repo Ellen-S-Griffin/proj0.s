@@ -49,6 +49,10 @@ print_backwards:
 	mfhi $t4		#loads remainder into $t4
 	add $t5, $s0, $t4		#stores $t4 + $s0 into $t5
 	lb $a0, 0($t5) 		
+	li $v0, 11		#loads immediate into $v0
+	syscall
+	addi $t3, $t3, 1		#increase value of t3 +1
+	j print_forward 		#loops 
 
 
 
