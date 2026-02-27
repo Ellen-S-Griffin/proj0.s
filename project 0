@@ -6,3 +6,5 @@ id: .asciiz "@04001794"
 
 main:
   la $s0,id    #load address of id into $s0
+  li $s1,11    #loads immediate into $s1
+	
