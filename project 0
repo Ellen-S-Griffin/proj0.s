@@ -30,3 +30,9 @@ print_forward:
 	syscall
 	addi $t3, $t3, 1		#increase value of t3 +1
 	j print_forward 		#loops 
+
+backward_loop:
+	bgt $t0, $s1, exit_program #branches to exit_program if $t0 is greater than $s1
+	# s = (n - m) % 9 
+	sub $t1, $s1, $t0 		#stores $s1 - $t0 into $t1
+	li $t2, 9		#loads immediate into $t2
