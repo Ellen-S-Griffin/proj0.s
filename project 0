@@ -11,3 +11,8 @@ main:
 forward_loop:
 	bgt $t0, $s1, backward_start #branches to backward_start if $t0 is greater than $s1
 	# s = (m - 1) % 9 
+	addi $t1, $t0, -1
+	li $t2, 9		#loads immediate into $t2
+	div $t1, $t2		#divides $t1 / $t2
+	mfhi $t1		#loads remainder into $t1
+	li $t3, 0		#loads immediate into $t3
