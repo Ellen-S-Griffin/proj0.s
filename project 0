@@ -44,6 +44,11 @@ print_backwards:
 	beq $t3, 9, end_backward_line #branches to end_backward_line if $t3 is equal to 9
 	# index = (s + i) % 9
 	add $t4, $t1, $t3		#stores $t1 + $t3 into $t4
+	li $t2, 9		#loads immediate into $t2
+	div $t4, $t2		#divides $t1 / $t2
+	mfhi $t4		#loads remainder into $t4
+	add $t5, $s0, $t4		#stores $t4 + $s0 into $t5
+	lb $a0, 0($t5) 		
 
 
 
