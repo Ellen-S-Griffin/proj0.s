@@ -16,3 +16,9 @@ forward_loop:
 	div $t1, $t2		#divides $t1 / $t2
 	mfhi $t1		#loads remainder into $t1
 	li $t3, 0		#loads immediate into $t3
+
+print_forward:
+	beq $t3, 9, end_forward_line #branches to end_forward_line if $t3 is equal to 9
+	# index = (s + i) % 9
+	add $t4, $t1, $t3
+
