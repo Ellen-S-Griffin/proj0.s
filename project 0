@@ -36,3 +36,5 @@ backward_loop:
 	# s = (n - m) % 9 
 	sub $t1, $s1, $t0 		#stores $s1 - $t0 into $t1
 	li $t2, 9		#loads immediate into $t2
+	div $t1, $t2		#divides $t1 / $t2
+	mfhi $t1		#loads remainder into $t1
